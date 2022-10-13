@@ -1,4 +1,8 @@
 {
+  "header": {
+    "tabStats": "Bảng thống kê",
+    "tabManage": "Quản lý"
+  },
   "home": {
     "title": "Chào mừng tới Happy House!",
     "content": "Bắt đầu thôi!"

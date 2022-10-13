@@ -1,4 +1,8 @@
 {
+  "header": {
+    "tabStats": "Statistical Tables",
+    "tabManage": "Manage"
+  },
   "home": {
     "title": "Welcome to Happy House!",
     "content": "Let's start!!!"
