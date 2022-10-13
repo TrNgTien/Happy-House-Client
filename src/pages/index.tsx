@@ -2,8 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 import routers from "../constants/routers";
+import StyledButton from "../components/StyledButton";
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -16,9 +17,8 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           <Link href={routers.WELCOME_PAGE}>Go To Welcome Page</Link>
         </h1>
-        <div></div>
+        <StyledButton />
       </main>
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
