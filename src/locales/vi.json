@@ -1,4 +1,5 @@
 {
+  "description": "Quản lí nhà trọ cho bạn tiện lợi hơn",
   "header": {
     "tabStats": "Bảng thống kê",
     "tabManage": "Quản lý"
@@ -9,5 +10,8 @@
   },
   "billing": {
     "content": "Bắt đầu hoá đơn!"
+  },
+  "managePage": {
+    "backButton": "Trở lại"
   }
 }
