@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./i18n.config')
+const { i18n } = require('./i18n.config');
 
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   i18n,
-}
+};
 const withTM = require('next-transpile-modules')([
   '@mui/material',
   '@mui/system',
-]); 
+]);
 
 module.exports = withTM({
   reactStrictMode: true,
@@ -21,4 +21,4 @@ module.exports = withTM({
     return config;
   },
 });
-module.exports = nextConfig
+module.exports = nextConfig;
