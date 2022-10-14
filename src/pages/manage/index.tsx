@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import MainLayout from "../../components/layout";
+import React, { useState } from 'react';
+import MainLayout from '../../components/layout';
 import {
   ArrowBackIos,
   PlaceOutlined,
   Settings,
   Search,
-} from "@mui/icons-material";
+} from '@mui/icons-material';
 import {
   Stack,
   Button,
@@ -15,19 +15,18 @@ import {
   IconButton,
   TextField,
   InputAdornment,
-} from "@mui/material";
-import useTrans from "../../hooks/useTrans";
-import { SelectChangeEvent } from "@mui/material/Select";
+} from '@mui/material';
+import { SelectChangeEvent } from '@mui/material/Select';
 import {
   BackTitleButton,
   AddressTypo,
   UpdateAddress,
-} from "./CalculationStyles";
-import Head from "next/head";
+} from './CalculationStyles';
+import Head from 'next/head';
+import TableCalculation from './components/TableCalulation';
 
 export default function CalculationPage() {
-  const trans = useTrans();
-  const [age, setAge] = useState("");
+  const [age, setAge] = useState('');
   const d = new Date();
   let year = d.getFullYear();
   let month = d.getMonth() + 1;
@@ -39,16 +38,19 @@ export default function CalculationPage() {
     <MainLayout>
       <Head>
         <title>Happy House</title>
-        <meta name="description" content={trans.description} />
+        <meta
+          name="description"
+          content="Quản lí nhà trọ cho bạn tiện lợi hơn"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Button
         variant="text"
-        style={{ color: "var(--button-color)", textTransform: "none" }}
+        style={{ color: 'var(--button-color)', textTransform: 'none' }}
       >
         <Stack direction="row" alignItems="center">
           <ArrowBackIos />
-          <BackTitleButton>{trans.managePage.backButton}</BackTitleButton>
+          <BackTitleButton>Trở lại</BackTitleButton>
         </Stack>
       </Button>
       <Stack
@@ -91,15 +93,16 @@ export default function CalculationPage() {
             </Select>
           </FormControl>
         </Stack>
-
-        <h1 style={{ color: "#C45C31" }}>Tiền Phòng trọ</h1>
-
+        <h1 style={{ color: '#C45C31' }}>Tiền Phòng trọ</h1>
         <Stack direction="row" alignItems="center">
           <TextField
             placeholder="Tìm phòng"
             id="outlined-end-adornment"
-            sx={{ width: "25ch" }}
-            style={{ backgroundColor: "white", borderRadius: "5px" }}
+            sx={{
+              width: '20ch',
+              backgroundColor: 'white',
+              borderRadius: '5px',
+            }}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
@@ -113,6 +116,7 @@ export default function CalculationPage() {
           </IconButton>
         </Stack>
       </Stack>
+      <TableCalculation />
     </MainLayout>
   );
 }

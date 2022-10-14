@@ -1,18 +1,19 @@
-import Link from "next/link";
-import styled from "styled-components";
-import { useRouter } from "next/router";
-import useTrans from "../../hooks/useTrans";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import IconButton from "@mui/material/IconButton";
-import { Avatar, Stack } from "@mui/material";
+import Link from 'next/link';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import useTrans from '../../hooks/useTrans';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import IconButton from '@mui/material/IconButton';
+import { Avatar, Stack } from '@mui/material';
 
 interface IPageProps {
   children: React.ReactNode;
 }
 
-const NavBar = styled.nav`
+const NavBar = styled.header`
   display: flex;
   position: fixed;
+  position: -webkit-fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -29,14 +30,14 @@ const BrandName = styled.h1`
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--brand-name-color);
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   &:hover {
     cursor: pointer;
   }
 `;
 const TabTitle = styled.a`
   color: #97826d;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
   &:hover {
@@ -48,7 +49,7 @@ const TabTitleActive = styled.a`
   background-color: #97826d;
   color: white;
   border-radius: 8px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
   padding: 0.5rem 1.5rem;
@@ -58,45 +59,47 @@ const TabTitleActive = styled.a`
 `;
 const WrapperMain = styled.main`
   background-color: var(--primary-color);
-  margin-top: 5rem;
+  width: 100vw;
   height: 100vh;
-  padding: 0 1rem;
+  padding: 0 2rem;
 `;
+const WrapperContent = styled.main`
+  margin-top: 5rem;
+`;
+
 export default function MainLayout({ children }: IPageProps) {
   const trans = useTrans();
   const { pathname } = useRouter();
   const IMAGE_URL =
-    "https://thuvienanime.com/wp-content/uploads/2022/04/Boruto.png";
+    'https://thuvienanime.com/wp-content/uploads/2022/04/Boruto.png';
   return (
-    <>
-      <header>
-        <NavBar>
-          <Stack direction="row" spacing={8}>
-            <Link href="/">
-              <BrandName>Happy House</BrandName>
+    <WrapperMain>
+      <NavBar>
+        <Stack direction="row" spacing={8}>
+          <Link href="/">
+            <BrandName>Happy House</BrandName>
+          </Link>
+          <Stack direction="row" spacing={4} alignItems="center">
+            <Link href="/statistic">
+              <TabTitle>{trans.header.tabStats}</TabTitle>
             </Link>
-            <Stack direction="row" spacing={4} alignItems="center">
-              <Link href="/statistic">
-                <TabTitle>{trans.header.tabStats}</TabTitle>
-              </Link>
-              <Link href="/manage">
-                {pathname === "/manage" ? (
-                  <TabTitleActive>{trans.header.tabManage}</TabTitleActive>
-                ) : (
-                  <TabTitle>{trans.header.tabManage}</TabTitle>
-                )}
-              </Link>
-            </Stack>
+            <Link href="/manage">
+              {pathname === '/manage' ? (
+                <TabTitleActive>{trans.header.tabManage}</TabTitleActive>
+              ) : (
+                <TabTitle>{trans.header.tabManage}</TabTitle>
+              )}
+            </Link>
           </Stack>
-          <Stack direction="row" spacing={2}>
-            <IconButton>
-              <NotificationsNoneOutlinedIcon />
-            </IconButton>
-            <Avatar alt="Avatar" src={IMAGE_URL} />
-          </Stack>
-        </NavBar>
-      </header>
-      <WrapperMain>{children}</WrapperMain>
-    </>
+        </Stack>
+        <Stack direction="row" spacing={2}>
+          <IconButton>
+            <NotificationsNoneOutlinedIcon />
+          </IconButton>
+          <Avatar alt="Avatar" src={IMAGE_URL} />
+        </Stack>
+      </NavBar>
+      <WrapperContent>{children}</WrapperContent>
+    </WrapperMain>
   );
 }

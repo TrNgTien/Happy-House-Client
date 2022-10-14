@@ -3,6 +3,9 @@ body {
   padding: 0;
   margin: 0;
 }
+a:visited {
+  color: var(--button-color);
+}
 * {
   box-sizing: border-box;
 }
@@ -10,5 +13,5 @@ body {
   --primary-color: #d4ccc1;
   --secondary-color: #e8e1d7;
   --brand-name-color: #3c6060;
-  --button-color:#97826d;
+  --button-color: #97826d;
 }

@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import MainLayout from "../components/layout";
-import useTrans from "../hooks/useTrans";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import MainLayout from '../components/layout';
+import useTrans from '../hooks/useTrans';
 
 const Home: NextPage = () => {
   const trans = useTrans();

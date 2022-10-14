@@ -1,5 +1,5 @@
-import { Button } from "@mui/material";
-import StyledButton from "../components/StyledButton";
+import { Button } from '@mui/material';
+import StyledButton from '../components/StyledButton';
 
 const SSRPage = () => {
   return (

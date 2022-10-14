@@ -1,5 +1,7 @@
 {
-  "description": "Quản lí nhà trọ cho bạn tiện lợi hơn",
+  "description": {
+    "content": "Quản lí nhà trọ cho bạn tiện lợi hơn"
+  },
   "header": {
     "tabStats": "Bảng thống kê",
     "tabManage": "Quản lý"
