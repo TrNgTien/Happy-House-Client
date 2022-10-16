@@ -1,5 +1,5 @@
-import styles from "./welcome.module.css";
-import useTrans from "../../hooks/useTrans";
+import styles from './welcome.module.css';
+import useTrans from '../../hooks/useTrans';
 const WelcomePage = () => {
   const trans = useTrans();
   return (
