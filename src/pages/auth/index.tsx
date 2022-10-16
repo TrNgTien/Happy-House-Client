@@ -46,7 +46,12 @@ const Login = () => {
   return (
     <Wrapper>
       <ImageWrapper>
-        <Image layout="fill" objectFit="cover" src={LoginImage} />
+        <Image
+          alt="login-image"
+          layout="fill"
+          objectFit="cover"
+          src={LoginImage}
+        />
       </ImageWrapper>
       <WrapperForm>
         <Form>
