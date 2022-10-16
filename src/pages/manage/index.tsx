@@ -21,9 +21,9 @@ import {
   BackTitleButton,
   AddressTypo,
   UpdateAddress,
-} from './CalculationStyles';
+} from '../../components/Table/CalculationStyles';
 import Head from 'next/head';
-import TableCalculation from './components/TableCalulation';
+import TableCalculation from '../../components/Table/TableCalulation';
 
 export default function CalculationPage() {
   const [age, setAge] = useState('');
