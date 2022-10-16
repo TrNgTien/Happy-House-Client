@@ -4,7 +4,7 @@ import MainLayout from '../components/layout';
 import useTrans from '../hooks/useTrans';
 
 const Home: NextPage = () => {
-  const trans = useTrans();
+  // const trans = useTrans();
 
   return (
     <div>
