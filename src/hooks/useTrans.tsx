@@ -3,9 +3,8 @@ import en from '../locales/en.json';
 import vi from '../locales/vi.json';
 
 const useTrans = () => {
-  const { locale } = useRouter();
-  const trans = locale === 'vi' ? vi : en;
-
+  const { defaultLocale } = useRouter();
+  const trans = defaultLocale === 'vi' ? vi : en;
   return trans;
 };
 

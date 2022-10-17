@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import MainLayout from '../../components/layout';
+import React, { ChangeEvent, useState } from 'react';
+import Head from 'next/head';
+import MainLayout from '@components/layout';
 import {
   ArrowBackIos,
   PlaceOutlined,
@@ -21,12 +22,12 @@ import {
   BackTitleButton,
   AddressTypo,
   UpdateAddress,
-} from './CalculationStyles';
-import Head from 'next/head';
-import TableCalculation from './components/TableCalulation';
+} from 'src/styles/CalculationStyles';
+import TableCalculation from '@components/feat/management-page';
 
-export default function CalculationPage() {
+export default function ManagePage() {
   const [age, setAge] = useState('');
+  const [roomName, setRoomName] = useState<string>('');
   const d = new Date();
   let year = d.getFullYear();
   let month = d.getMonth() + 1;
@@ -34,15 +35,15 @@ export default function CalculationPage() {
     setAge(event.target.value);
   };
 
+  const handleRoomName = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setRoomName(event.target.value);
+  };
   return (
     <MainLayout>
       <Head>
         <title>Happy House</title>
-        <meta
-          name="description"
-          content="Quản lí nhà trọ cho bạn tiện lợi hơn"
-        />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Button
         variant="text"
@@ -84,9 +85,7 @@ export default function CalculationPage() {
           </FormControl>
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Select value={age} onChange={handleChange} displayEmpty>
-              <MenuItem value="">
-                <em>Tháng {month}</em>
-              </MenuItem>
+              <MenuItem value="">Tháng {month}</MenuItem>
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
@@ -98,11 +97,14 @@ export default function CalculationPage() {
           <TextField
             placeholder="Tìm phòng"
             id="outlined-end-adornment"
+            type={'text'}
+            value={roomName}
             sx={{
               width: '20ch',
               backgroundColor: 'white',
               borderRadius: '5px',
             }}
+            onChange={handleRoomName}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
@@ -116,7 +118,7 @@ export default function CalculationPage() {
           </IconButton>
         </Stack>
       </Stack>
-      <TableCalculation />
+      <TableCalculation searchedRoom={roomName} />
     </MainLayout>
   );
 }

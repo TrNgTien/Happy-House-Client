@@ -59,12 +59,13 @@ const TabTitleActive = styled.a`
 `;
 const WrapperMain = styled.main`
   background-color: var(--primary-color);
-  width: 100vw;
-  height: 100vh;
-  padding: 0 2rem;
+  /* min-width: 100vw; */
+  min-height: 100vh;
 `;
-const WrapperContent = styled.main`
+const WrapperContentMain = styled.main`
   margin-top: 5rem;
+  height: 100%;
+  padding: 1rem 2rem;
 `;
 
 export default function MainLayout({ children }: IPageProps) {
@@ -99,7 +100,7 @@ export default function MainLayout({ children }: IPageProps) {
           <Avatar alt="Avatar" src={IMAGE_URL} />
         </Stack>
       </NavBar>
-      <WrapperContent>{children}</WrapperContent>
+      <WrapperContentMain>{children}</WrapperContentMain>
     </WrapperMain>
   );
 }
