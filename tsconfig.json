@@ -24,7 +24,7 @@
       "@slices/*": ["./src/slices/*"],
       "@constants/*": ["./src/constants/*"],
       "@utils/*": ["./src/utils/*"],
-      "@props-types/*": ["./src/props-types/*"],
+      "@props-types/*": ["./src/props-types/*"]
     },
     "baseUrl": "."
   },
