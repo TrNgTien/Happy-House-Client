@@ -22,7 +22,7 @@ import {
   BackTitleButton,
   AddressTypo,
   UpdateAddress,
-} from 'src/styles/CalculationStyles';
+} from '@styles/CalculationStyles';
 import TableCalculation from '@components/feat/management-page';
 
 export default function ManagePage() {
