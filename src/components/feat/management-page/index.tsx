@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, BodyTable } from 'src/styles/CalculationStyles';
+import { Table, BodyTable } from '@styles/CalculationStyles';
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';
 import { TABLE_DATA } from '@constants/mock-data';
