@@ -1,6 +1,10 @@
 import React, { ChangeEvent, useState } from 'react';
 import Head from 'next/head';
 import MainLayout from '@components/layout';
+import { BackTitleButton, AddressTypo, UpdateAddress } from '@styles/CalculationStyles';
+import TableCalculation from '@components/feat/management-page';
+import Router from 'next/router';
+
 import {
   ArrowBackIos,
   PlaceOutlined,
@@ -18,12 +22,7 @@ import {
   InputAdornment,
 } from '@mui/material';
 import { SelectChangeEvent } from '@mui/material/Select';
-import {
-  BackTitleButton,
-  AddressTypo,
-  UpdateAddress,
-} from '@styles/CalculationStyles';
-import TableCalculation from '@components/feat/management-page';
+
 
 export default function ManagePage() {
   const [age, setAge] = useState('');
@@ -49,7 +48,7 @@ export default function ManagePage() {
         variant="text"
         style={{ color: 'var(--button-color)', textTransform: 'none' }}
       >
-        <Stack direction="row" alignItems="center">
+        <Stack direction="row" alignItems="center" onClick={() => Router.push('/manage')}>
           <ArrowBackIos />
           <BackTitleButton>Trở lại</BackTitleButton>
         </Stack>

@@ -2,10 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 import Router from 'next/router';
-import LoginImage from '../../assets/images/login-img.png';
-import { Button } from '../../components/Button';
-import TextField from '../../components/TextField';
-import { H1, P } from '../../components/Typography';
+import LoginImage from '@assets/images/login-img.png';
+import { Button } from '@components/Button';
+import TextField from '@components/TextField';
+import { H1, P } from '@components/Typography';
 
 const Wrapper = styled.div`
   display: flex;
