@@ -1,4 +1,4 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  MANAGE_PAGE: '/manage',
+  DD_MM_YY: 'DD/MM/YY',
 };
