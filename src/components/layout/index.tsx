@@ -59,7 +59,7 @@ const TabTitleActive = styled.a`
 `;
 const WrapperMain = styled.main`
   background-color: var(--primary-color);
-  /* min-width: 100vw; */
+  min-width: 100vw;
   min-height: 100vh;
 `;
 const WrapperContentMain = styled.main`
