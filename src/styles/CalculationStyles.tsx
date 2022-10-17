@@ -3,20 +3,17 @@ import { TableDataProps } from '@props-types/index';
 export const BackTitleButton = styled.h1`
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--button-color);
-  font-family: 'Inter', sans-serif;
-`;
+  color: var(--button-color);`;
 export const AddressTypo = styled.h1`
   font-size: 1.2rem;
   font-weight: 600;
   color: #342f29;
-  font-family: 'Inter', sans-serif;
   font-style: italic;
 `;
 export const UpdateAddress = styled.a`
   font-size: 1rem;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+
   text-decoration: underline;
   font-style: italic;
   &:hover {
@@ -26,7 +23,6 @@ export const UpdateAddress = styled.a`
 
 export const TableData = styled.td<TableDataProps>`
   border: 1px solid black;
-  font-family: 'Inter', sans-serif;
   padding: 0.5rem;
   text-align: center;
   background-color: #fbf7f1;

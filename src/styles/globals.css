@@ -9,6 +9,7 @@ a:visited {
 }
 * {
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 :root {
   --primary-color: #d4ccc1;
