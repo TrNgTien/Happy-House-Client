@@ -1,4 +1,4 @@
-import React, { useState, FC } from 'react';
+import React, { useState } from 'react';
 import { Table, BodyTable } from 'src/styles/CalculationStyles';
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';
@@ -6,7 +6,7 @@ import { TABLE_DATA } from '@constants/mock-data';
 import { IRow } from '@props-types/index';
 import { Pagination, Stack } from '@mui/material';
 
-export default function TableCalculation({ searchedRoom }: any) {
+export default function TableCalculation() {
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 10;
   const indexOfLastRow = currentPage * rowsPerPage;

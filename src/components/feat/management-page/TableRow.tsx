@@ -1,17 +1,6 @@
 import React, { useState } from 'react';
 import { TableData, Tr } from 'src/styles/CalculationStyles';
 import { _numberWithCommas } from '@utils/FormatHelper';
-import index from '../../common/index';
-
-interface IWaterMoney {
-  rowId: number;
-  waterMoney: number;
-}
-interface IElectricMoney {
-  rowId: number;
-  electricMoney: number;
-}
-
 const TableRow = ({ detailRow }: any) => {
   const [electricMoney, setElectricMoney] = useState<number>(0);
   const [waterMoney, setWaterMoney] = useState<number>(0);
