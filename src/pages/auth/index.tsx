@@ -38,24 +38,29 @@ const ImageWrapper = styled.div`
 `;
 
 const Login = () => {
-	return (
-		<Wrapper>
-			<ImageWrapper>
-				<Image layout="fill" objectFit="cover" src={LoginImage} />
-			</ImageWrapper>
-			<WrapperForm>
-				<Form>
-					<H1>ĐĂNG NHẬP</H1>
-					<TextField id="username" label="Tên đăng nhập:" type="text" />
-					<TextField id="password" label="Mật khẩu:" type="password" />
-				</Form>
-				<Button>Đồng ý</Button>
-				<P>
-					Nếu bạn chưa có tài khoản. <A>LIÊN HỆ CHÚNG TÔI</A>
-				</P>
-			</WrapperForm>
-		</Wrapper>
-	);
+  return (
+    <Wrapper>
+      <ImageWrapper>
+        <Image
+          alt="login-image"
+          layout="fill"
+          objectFit="cover"
+          src={LoginImage}
+        />
+      </ImageWrapper>
+      <WrapperForm>
+        <Form>
+          <H1>ĐĂNG NHẬP</H1>
+          <TextField id="username" label="Tên đăng nhập:" type="text" />
+          <TextField id="password" label="Mật khẩu:" type="password" />
+        </Form>
+        <Button>Đồng ý</Button>
+        <P>
+          Nếu bạn chưa có tài khoản. <A href="#">LIÊN HỆ CHÚNG TÔI</A>
+        </P>
+      </WrapperForm>
+    </Wrapper>
+  );
 };
 
 export default Login;
