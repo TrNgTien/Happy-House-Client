@@ -7,10 +7,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Happy House</title>
-        <meta
-          name="description"
-          content="Quản lí nhà trọ cho bạn tiện lợi hơn"
-        />
+        {/* <meta name="description" content={trans.description} /> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
