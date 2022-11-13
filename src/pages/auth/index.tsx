@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { FormEvent } from 'react';
 import styled from 'styled-components';
 import Router from 'next/router';
 import LoginImage from '@assets/images/login-img.png';
@@ -39,6 +39,12 @@ const ImageWrapper = styled.div`
 `;
 
 export default function Login() {
+  function setCustomValidateMessage(
+    e: FormEvent<HTMLInputElement>,
+    msg: string
+  ) {
+    (e.target as HTMLInputElement).setCustomValidity(msg);
+  }
   return (
     <Wrapper>
       <ImageWrapper>
@@ -50,12 +56,35 @@ export default function Login() {
         />
       </ImageWrapper>
       <WrapperForm>
-        <Form>
+        <Form id="login-form">
           <H1>ĐĂNG NHẬP</H1>
-          <TextField id="username" label="Tên đăng nhập:" type="text" />
-          <TextField id="password" label="Mật khẩu:" type="password" />
+          <TextField
+            id="username"
+            label="Tên đăng nhập:"
+            type="number"
+            required
+            onInvalid={(e) =>
+              setCustomValidateMessage(e, 'Vui lòng điền đầy đủ số điện thoại')
+            }
+            onInput={(e) => setCustomValidateMessage(e, '')}
+            title="Vui lòng điền đầy đủ số điện thoại"
+          />
+          <TextField
+            id="password"
+            label="Mật khẩu:"
+            type="password"
+            required
+            onInvalid={(e) =>
+              setCustomValidateMessage(e, 'Vui lòng điền đầy đủ mật khẩu')
+            }
+            onInput={(e) => setCustomValidateMessage(e, '')}
+            title="Vui lòng điền đầy đủ mật khẩu"
+          />
         </Form>
-        <Button onClick={() => Router.push('/manage')}>Đồng ý</Button>
+        <Button type="submit" form="login-form">
+          Đồng ý
+        </Button>
+        {/* onClick={() => Router.push('/manage')} */}
         <P>
           Nếu bạn chưa có tài khoản. <A href="#">LIÊN HỆ CHÚNG TÔI</A>
         </P>

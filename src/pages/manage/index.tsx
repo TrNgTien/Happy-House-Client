@@ -4,6 +4,15 @@ import Link from 'next/link';
 import MainLayout from '@components/layout';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { Select, FormControl, MenuItem, Stack } from '@mui/material';
+import styled from 'styled-components';
+import RoomCard from '@components/RoomCard/RoomCard';
+import { H1 } from '@components/Typography';
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.75rem;
+`;
 
 export default function ManagePage() {
   const [age, setAge] = useState('');
@@ -27,18 +36,16 @@ export default function ManagePage() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      <h1>List house</h1>
-      <Stack spacing={2} direction="row">
-        <Link href="/manage/1">
-          <a>House 1</a>
-        </Link>
-        <Link href="/manage/2">
-          <a>House 2</a>
-        </Link>
-        <Link href="/manage/3">
-          <a>House 3</a>
-        </Link>
-      </Stack>
+
+      <Wrapper>
+        <RoomCard />
+        <RoomCard />
+        <RoomCard />
+        <RoomCard />
+        <RoomCard />
+        <RoomCard />
+        <RoomCard />
+      </Wrapper>
     </MainLayout>
   );
 }
