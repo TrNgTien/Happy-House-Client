@@ -81,10 +81,12 @@ export default function Login() {
             title="Vui lòng điền đầy đủ mật khẩu"
           />
         </Form>
-        <Button type="submit" form="login-form">
+        <Button type="submit" form="login-form"
+          onClick={() => Router.push('/manage')} 
+         >
           Đồng ý
         </Button>
-        {/* onClick={() => Router.push('/manage')} */}
+       
         <P>
           Nếu bạn chưa có tài khoản. <A href="#">LIÊN HỆ CHÚNG TÔI</A>
         </P>
