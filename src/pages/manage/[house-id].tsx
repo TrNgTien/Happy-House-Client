@@ -117,7 +117,7 @@ export default function ManagePage() {
           </IconButton>
         </Stack>
       </Stack>
-      <TableCalculation searchedRoom={roomName} />
+      <TableCalculation/>
     </MainLayout>
   );
 }
