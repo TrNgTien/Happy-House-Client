@@ -1,9 +1,19 @@
 {
+  "description": {
+    "content": "Quản lí nhà trọ cho bạn tiện lợi hơn"
+  },
+  "header": {
+    "tabStats": "Bảng thống kê",
+    "tabManage": "Quản lý"
+  },
   "home": {
     "title": "Chào mừng tới Happy House!",
     "content": "Bắt đầu thôi!"
   },
   "billing": {
     "content": "Bắt đầu hoá đơn!"
+  },
+  "managePage": {
+    "backButton": "Trở lại"
   }
 }
